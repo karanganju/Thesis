@@ -1,0 +1,13 @@
+\chapter{Background}
+\section{Neural Networks}
+Neural networks are machine learning models that are typically built of several layers of computational units that process or transform the output of the previous layer and produce input for the next layer. The type of transformation often depends on the type of the task at hand. For example, convolutional layers are often employed for images while recurrent layers have been traditionally employed for text. The most commonly used layers are linear layers built up of multiple perceptrons. Each perceptron has an associated weight for each each of it's inputs and an additive bias. Hence, for the input to the layer, $x_{i-1}$, the output of the perceptron $x_{ij}$ with weight row vector $w_{ij} \in \mathbb{R}^{|x_{i-1}|}$ and bias $b_{ij} \in \mathbb{R}^1$ is
+$$
+x_{ij} = w_{ij}^T \cdot x_{i-1} + b_{ij}
+$$
+and the layer output, $x_i$ is given as
+$$
+x_i = [x_{i0}, x_{i1}, \cdot \cdot \cdot x_{iN}]
+$$
+For each layer, the choice of number of perceptrons is a design choice and is treated as a hyperparameter to be tuned. The number of perceptrons in the final layer could range from $1$ for regression and 2-way classification tasks to $k$ for $k$-class/label classification.
+\section{Property Inference}
+Property inference attacks explore the general problem 
